@@ -4,9 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TRY</title>
+    <title>trying</title>
 </head>
 <body>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/ObRp5rxonrErel=0&autoplay=1" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+    <img src="play.png" id="icon">
+
+    <audio id="mysong">
+        <source src="04 Happy Birthday (ABCD  2) Sachin Jigar 320Kbps.mp3" type="audio/mp3">
+    </audio>
+
+    <script>
+        var mysong = document.getElementById("mysong");
+        var icon=document.getElementById("icon");
+
+        icon.onclick = function(){
+            if(mysong.paused){
+                mysong.play();
+                icon.src="pause.png";
+            }else{
+                mysong.pause();
+                icon.src="play.png";
+            }
+            
+        }
+    </script>
 </body>
 </html>
